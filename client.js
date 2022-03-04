@@ -14,14 +14,15 @@ function addEmployee(){
     let empID = $( `#empIdInput` ).val();
     let title = $( `#titleInput` ).val();
     let salary = $( `#salaryInput` ).val();
-    console.log( fname, lname, empID, title );
+    console.log( fname, lname, empID, title, salary );
     $( `#empRow` ).append(`
-    <tr>
-        <td>${fname}</td>
-        <td>${lname}</td>
-        <td>${empID}</td>
-        <td>${title}</td>
-        <td>${salary}</td>
-    </tr>
+        <tr id="${empID}">
+            <td>${fname}</td>
+            <td>${lname}</td>
+            <td>${empID}</td>
+            <td>${title}</td>
+            <td>${salary}</td>
+            <td><button id="${empID}">Delete</button></td>
+        </tr>
     `)
 }
