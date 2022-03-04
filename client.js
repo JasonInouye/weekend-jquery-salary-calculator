@@ -4,8 +4,9 @@ $(readyNow);
 
 function readyNow(){
     console.log( `JQuery is loaded` );
+    $( `.submitBtn`).on( `click`, addEmployee );
 }
 
-function handleSubmit(){
+function addEmployee(){
     console.log( `Submit Button` );
 }
