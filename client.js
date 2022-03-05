@@ -5,12 +5,16 @@ $(readyNow);
 function readyNow(){
     console.log( `JQuery is loaded` );
     $( `.submitBtn`).on( `click`, addEmployee );
+    //$( `.sumSalary`).on( `click`, monthlySalarySum );
     // you need to load an existing DOM object and use the dynamic ID or CLASS in the parent > child tree
-    $( `#empRow`).on( `click`, `.deleteBtn`, deleteEmployee )
+    $( `#empRow`).on( `click`, `.deleteBtn`, deleteEmployee );
+
+    render();
     
 }
 
 const employees = [];
+
 
 function deleteEmployee(){
     let rowName = $(this).closest( `tr` )
@@ -22,9 +26,6 @@ function deleteEmployee(){
 function addEmployee(){
     console.log( `Submit Button` );
     
-
-    // storing data into an array in order to get sum of salary
-   
 
     let fname = $( `#fnameInput` ).val();
     let lname = $( `#lnameInput` ).val();
@@ -44,8 +45,9 @@ function addEmployee(){
     };
 
     console.log( newEmployee );
-
+    // storing data into an array in order to get sum of salary
     employees.push( newEmployee );
+    render();
 
     console.log( `this is the employees array`, employees );
     
@@ -65,6 +67,27 @@ function addEmployee(){
     $( `#empIdInput` ).val( `` );
     $( `#titleInput` ).val( `` );
     $( `#salaryInput` ).val( `` );
+
+    // // Do I need a loop to sum total?
+    // monthlySalary += Number(employees.salary);
+    // console.log( `this is the monthly salary:`, monthlySalary );
+
+    // for (let i = 0; i < employees.length; i++) {
+    //     //let monthlySalary = 0;
+    //     monthlySalary += Number(employees[i].salary);
+    //     console.log( `this is the monthly salary:`, monthlySalary );
+    // }
+
     // an attempt to clear all fields with only one ID
     //$( `#inputFields` ).val( `` );
+}
+
+function render(){
+    let monthlySalary = 0;
+
+    for (let i = 0; i < employees.length; i++) {     
+        monthlySalary += Number(employees[i].salary);     
+    }
+    
+    console.log( `this is the monthly salary:`, monthlySalary );
 }
