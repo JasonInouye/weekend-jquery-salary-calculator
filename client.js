@@ -5,6 +5,8 @@ $(readyNow);
 function readyNow(){
     console.log( `JQuery is loaded` );
     $( `.submitBtn`).on( `click`, addEmployee );
+
+    
 }
 
 function addEmployee(){
@@ -25,4 +27,12 @@ function addEmployee(){
             <td><button id="${empID}">Delete</button></td>
         </tr>
     `)
+
+    $( `#fnameInput` ).val( `` );
+    $( `#lnameInput` ).val( `` );
+    $( `#empIdInput` ).val( `` );
+    $( `#titleInput` ).val( `` );
+    $( `#salaryInput` ).val( `` );
+    // an attempt to clear all fields with only one ID
+    //$( `#inputFields` ).val( `` );
 }
