@@ -10,7 +10,7 @@ function readyNow(){
     
 }
 
-const employees = [{}]
+const employees = [];
 
 function deleteEmployee(){
     let rowName = $(this).closest( `tr` )
@@ -24,7 +24,7 @@ function addEmployee(){
     
 
     // storing data into an array in order to get sum of salary
-    const employees = [];
+   
 
     let fname = $( `#fnameInput` ).val();
     let lname = $( `#lnameInput` ).val();
