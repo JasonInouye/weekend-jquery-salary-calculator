@@ -7,7 +7,8 @@ function readyNow(){
     $( `.submitBtn`).on( `click`, addEmployee );
     //$( `.sumSalary`).on( `click`, monthlySalarySum );
     // you need to load an existing DOM object and use the dynamic ID or CLASS in the parent > child tree
-    $( `#empRow`).on( `click`, `.deleteBtn`, deleteEmployee );
+    //$( `#empRow`).on( `click`, `.deleteBtn`, deleteEmployee );
+    $( `#empRow`).on( `click`, `.deleteBtn`, exploreThis );
 
     render();
     
@@ -17,11 +18,20 @@ const employees = [];
 
 
 function deleteEmployee(){
-    let rowName = $(this).closest( `tr` )
+    let rowName = $(this).closest( `td` )
     console.log( `inside deleteEmployee` );
     console.log( rowName );
-    $(this).closest( `tr` ).remove();
+    $(this).closest( `td` ).remove();
 }
+
+function exploreThis(){
+    let outputThis = $(this);
+    let outputThis2 = $(this).closest( `td`,`.employeeID` );
+    console.log(`what is outputThis`, outputThis );
+    console.log(`what is outputThis2`, outputThis2 );
+}
+
+exploreThis();
 
 function addEmployee(){
     console.log( `Submit Button` );
@@ -55,9 +65,9 @@ function addEmployee(){
         <tr>
             <td>${fname}</td>
             <td>${lname}</td>
-            <td>${empID}</td>
+            <td class="employeeID">${empID}</td>
             <td>${title}</td>
-            <td>${salary}</td>
+            <td class="salary">${salary}</td>
             <td><button class="deleteBtn">Delete</button></td>
         </tr>
     `)
