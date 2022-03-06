@@ -31,7 +31,7 @@ function addEmployee(){
     let lname = $( `#lnameInput` ).val();
     let empID = $( `#empIdInput` ).val();
     let title = $( `#titleInput` ).val();
-    let salary = $( `#salaryInput` ).val();
+    let salary = parseFloat($( `#salaryInput` ).val()).toFixed(2);
 
     console.log( fname, lname, empID, title, salary );
 
@@ -89,11 +89,13 @@ function render(){
         monthlySalary += Number(employees[i].salary);     
     }
 
+    let outputSalary = parseFloat(monthlySalary).toFixed(2);
+
     // console.log( `this is the monthly salary:`, monthlySalary );
     if (monthlySalary > 20000 ) {
         console.log( `This is 20000` );
-        $( `#montlyTotal`).text(monthlySalary).css("color", "red");
+        $( `#montlyTotal`).text(outputSalary).css("color", "red");
     } else {
-        $( `#montlyTotal`).text(monthlySalary).css("color", "black");
+        $( `#montlyTotal`).text(outputSalary).css("color", "black");
     }
 }
