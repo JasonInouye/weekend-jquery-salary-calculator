@@ -6,22 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="jquery-3.6.0.min.js"></script>
     <script src="client.js"></script>
+    <link rel="stylesheet" href="bootstrap.css">
     <link rel="stylesheet" href="style.css">
     <title>Salary Calculator</title>
 </head>
 <body>
     <header>
-        <h1>Salary Calculator</h1>
+        <h1 class="display-1">Salary Calculator</h1>
     </header>
     <main id="container">
         <div class="submitArea">
-            <h2>Add Employee</h2> 
-            <div class="inputFields">
-                <input type="text" placeholder="First Name" id="fnameInput">
-                <input type="text" placeholder="Last Name" id="lnameInput">
-                <input type="number" placeholder="Employee ID" id="empIdInput">
-                <input type="text" placeholder="Title" id="titleInput">
-                <input type="number" placeholder="Annual Salary" id="salaryInput">
+            <h2 class="text-muted">Add Employee</h2> 
+            <div class="inputFields input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">First Name</span>
+                <input type="text" id="fnameInput" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                <span class="input-group-text" id="inputGroup-sizing-default">Last Name</span>
+                <input type="text" id="lnameInput" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                <span class="input-group-text" id="inputGroup-sizing-default">EmpID</span>
+                <input type="number" placeholder="Employee ID" id="empIdInput" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                <span class="input-group-text" id="inputGroup-sizing-default">Title</span>
+                <input type="text" id="titleInput" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                <span class="input-group-text" id="inputGroup-sizing-default">Annual Salary</span>
+                <input type="number" id="salaryInput" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                 <button class="submitBtn sumSalary">Submit</button>
             </div>
         </div>
