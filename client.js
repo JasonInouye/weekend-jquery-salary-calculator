@@ -21,6 +21,7 @@ function deleteEmployee(){
     $(this).closest( `td` ).remove();
 }
 
+// IF Dane does not go over reconciling monthly sum make sure you ask.
 // My attempt to remove the row in the array with the empID from deleted row.
 // empID is being stored in the table class employeeID
 // function exploreThis(){
@@ -53,7 +54,6 @@ function addEmployee(){
         title: $( `#titleInput` ).val(),
         salary: $( `#salaryInput` ).val()
     };
-
     // console.log( newEmployee );
     // storing data into an array in order to get sum of salary
     employees.push( newEmployee );

@@ -22,3 +22,17 @@ header{
     bottom: 10px;
     width: 35%;
 }
+
+.index-intro{
+    width: 100%;
+    background-color: lightgray;
+}
+
+.index-intro .jumbotron{
+    padding: 35px 15px;
+    border-radius: 6px;
+    margin: 0px;
+    background-image: url('https://assets-blog.fundera.com/assets/wp-content/uploads/2018/11/10135735/shutterstock_1702901266.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
