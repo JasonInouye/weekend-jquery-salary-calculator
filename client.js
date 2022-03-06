@@ -104,3 +104,12 @@ function render(){
         $( `#montlyTotal`).text(outputSalary).css("color", "black");
     }
 }
+
+// Further Updates desired
+// apply money format $xxx,xxx,xxx.xx
+// Updated total once someone is removed
+// validate fields have data before submitting
+// validate employee ID is unique
+// create either a side container or a nav bar for useful HR/Budget links
+// set total monthly output to alter position when changing size of window.
+
