@@ -1,0 +1,13 @@
+body {
+    margin: 25px;
+}
+
+.inputFields{
+    margin-right: 50px;
+}
+
+.total{
+    position: absolute;
+    bottom: 10px;
+    width: 30%;
+}

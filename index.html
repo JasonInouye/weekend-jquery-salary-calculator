@@ -17,22 +17,22 @@
     <main id="container">
         <div class="submitArea">
             <h2 class="text-muted">Add Employee</h2> 
-            <div class="inputFields input-group mb-3">
+            <div class="inputFields input-group input-group-sm mb-3">
                 <span class="input-group-text" id="inputGroup-sizing-default">First Name</span>
                 <input type="text" id="fnameInput" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                 <span class="input-group-text" id="inputGroup-sizing-default">Last Name</span>
                 <input type="text" id="lnameInput" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                 <span class="input-group-text" id="inputGroup-sizing-default">EmpID</span>
-                <input type="number" placeholder="Employee ID" id="empIdInput" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                <input type="number" id="empIdInput" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                 <span class="input-group-text" id="inputGroup-sizing-default">Title</span>
                 <input type="text" id="titleInput" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                 <span class="input-group-text" id="inputGroup-sizing-default">Annual Salary</span>
                 <input type="number" id="salaryInput" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-                <button class="submitBtn sumSalary">Submit</button>
+                <button class="submitBtn sumSalary btn btn-primary" type="submit">Submit</button>
             </div>
         </div>
         <div class="empTable">
-            <table>
+            <table class="table table-dark table-striped">
                 <thead>
                     <tr>
                         <th>First Name</th>
@@ -49,8 +49,8 @@
                 </tbody>
             </table>
         </div>
-        <div>
-            <p>Total Monthly: <span id="montlyTotal">0</span></p>
+        <div class="total">
+            <p class="display-4">Total Monthly: <span id="montlyTotal">0</span></p>
         </div>
     </main>
 </body>
