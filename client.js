@@ -86,7 +86,7 @@ function render(){
     let monthlySalary = 0;
 
     for (let i = 0; i < employees.length; i++) {     
-        monthlySalary += Number(employees[i].salary);     
+        monthlySalary += Number(employees[i].salary/12);     
     }
 
     let outputSalary = parseFloat(monthlySalary).toFixed(2);
