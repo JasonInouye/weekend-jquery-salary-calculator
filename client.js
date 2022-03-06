@@ -88,6 +88,12 @@ function render(){
     for (let i = 0; i < employees.length; i++) {     
         monthlySalary += Number(employees[i].salary);     
     }
-    
-    console.log( `this is the monthly salary:`, monthlySalary );
+
+    // console.log( `this is the monthly salary:`, monthlySalary );
+    if (monthlySalary > 20000 ) {
+        console.log( `This is 20000` );
+        $( `#montlyTotal`).text(monthlySalary).css("color", "red");
+    } else {
+        $( `#montlyTotal`).text(monthlySalary).css("color", "black");
+    }
 }
